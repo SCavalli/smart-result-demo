@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smart Result — юридическая защита бизнеса в Москве и по всей России</title>
+<meta name="description" content="Smart Result — юридическая компания для бизнеса: корпоративные споры, защита при проверках, договорная работа, сделки с недвижимостью, интеллектуальная собственность. Бесплатная консультация, работаем по всей России.">
+<meta property="og:title" content="Smart Result — юридическая защита бизнеса">
+<meta property="og:description" content="Решаем сложные юридические задачи бизнеса. 12 лет, 500+ дел, офисы Москва и Сочи.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d1b2a;
+  --navy-2:#13263b;
+  --navy-3:#1b3450;
+  --ink:#0d1b2a;
+  --paper:#ffffff;
+  --soft:#f4f6f9;
+  --soft-2:#eaeef4;
+  --line:#dfe5ee;
+  --muted:#5d6b7e;
+  --text:#1d2a3a;
+  --gold:#c2a14d;
+  --gold-2:#a8853a;
+  --accent:#1f6feb;
+  --ok:#1f9d6b;
+  --radius:16px;
+  --shadow:0 18px 50px rgba(13,27,42,.12);
+  --shadow-sm:0 8px 24px rgba(13,27,42,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',system-ui,sans-serif;
+  color:var(--text);
+  background:var(--paper);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15;color:var(--ink);font-weight:600}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.eyebrow{font-family:'Manrope';font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--gold-2)}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;justify-content:center;
+  font-family:'Manrope';font-weight:700;font-size:15px;cursor:pointer;border:0;
+  padding:15px 26px;border-radius:12px;transition:.2s;white-space:nowrap;
+}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#1a1304;box-shadow:0 10px 24px rgba(194,161,77,.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(194,161,77,.45)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--navy-2);transform:translateY(-2px)}
+.btn-block{width:100%}
+
+/* ---------- HEADER ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}
+header .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 0;transition:.3s}
+header.scrolled{background:rgba(13,27,42,.96);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(0,0,0,.25)}
+header.scrolled .bar{padding:12px 0}
+.logo{display:flex;align-items:center;gap:12px;color:#fff}
+.logo .mark{width:42px;height:42px;border:2px solid var(--gold);border-radius:9px;display:grid;place-items:center;font-family:'Playfair Display';font-weight:700;color:var(--gold);font-size:20px}
+.logo b{font-family:'Manrope';font-weight:800;letter-spacing:.04em;font-size:19px;line-height:1}
+.logo small{display:block;font-family:'Manrope';font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:3px}
+nav.main{display:flex;gap:28px;align-items:center}
+nav.main a{color:rgba(255,255,255,.82);font-weight:500;font-size:15px;transition:.2s}
+nav.main a:hover{color:#fff}
+.head-cta{display:flex;align-items:center;gap:18px}
+.head-phone{color:#fff;font-weight:700;font-size:17px;white-space:nowrap}
+.head-phone small{display:block;font-weight:500;font-size:11px;color:var(--gold);letter-spacing:.05em}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+.burger span{width:26px;height:2px;background:#fff;transition:.3s}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  background:
+    linear-gradient(115deg,rgba(13,27,42,.96) 0%,rgba(13,27,42,.82) 45%,rgba(13,27,42,.55) 100%),
+    radial-gradient(1200px 600px at 80% -10%,rgba(194,161,77,.18),transparent 60%),
+    linear-gradient(135deg,#0a1622,#142a42);
+  color:#fff;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;opacity:.07;
+  background-image:radial-gradient(circle at 1px 1px,#fff 1px,transparent 0);background-size:34px 34px;
+}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;padding-top:120px;padding-bottom:60px}
+.hero h1{color:#fff;font-size:clamp(34px,4.6vw,60px);font-weight:700}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{color:rgba(255,255,255,.82);font-size:19px;margin:22px 0 30px;max-width:560px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.hero-trust{display:flex;gap:26px;flex-wrap:wrap}
+.hero-trust div{font-size:14px;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:9px}
+.hero-trust b{color:var(--gold);font-size:15px}
+.lead-card{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);color:var(--text)}
+.lead-card h3{font-size:23px;margin-bottom:6px}
+.lead-card p{font-size:14px;color:var(--muted);margin-bottom:18px}
+.field{margin-bottom:13px}
+.field input,.field textarea{
+  width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:11px;
+  font-family:'Manrope';font-size:15px;color:var(--text);transition:.2s;background:var(--soft);
+}
+.field input:focus,.field textarea:focus{outline:0;border-color:var(--gold);background:#fff}
+.lead-card .note{font-size:12px;color:var(--muted);margin-top:12px;text-align:center}
+
+/* ---------- STATS ---------- */
+.stats{background:var(--navy-2);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:46px 22px}
+.stat{text-align:center;border-right:1px solid rgba(255,255,255,.12)}
+.stat:last-child{border:0}
+.stat .num{font-family:'Playfair Display';font-size:42px;font-weight:700;color:var(--gold);line-height:1}
+.stat .lbl{font-size:14px;color:rgba(255,255,255,.78);margin-top:8px}
+
+/* ---------- SECTIONS ---------- */
+section{padding:90px 0}
+.sec-head{text-align:center;max-width:720px;margin:0 auto 54px}
+.sec-head h2{font-size:clamp(28px,3.6vw,42px);margin:14px 0 14px}
+.sec-head p{color:var(--muted);font-size:17px}
+
+/* services */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;transition:.25s;position:relative;overflow:hidden;
+}
+.svc::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-2));transform:scaleX(0);transform-origin:left;transition:.3s}
+.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.svc:hover::before{transform:scaleX(1)}
+.svc .ic{width:56px;height:56px;border-radius:13px;background:var(--soft);display:grid;place-items:center;margin-bottom:18px;color:var(--gold-2)}
+.svc h3{font-size:21px;margin-bottom:10px}
+.svc p{color:var(--muted);font-size:15px;margin-bottom:16px}
+.svc a{color:var(--gold-2);font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:7px}
+.svc a:hover{gap:11px}
+
+/* why */
+.why{background:var(--soft)}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.feat{background:#fff;border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow-sm)}
+.feat .ic{width:48px;height:48px;border-radius:12px;background:var(--navy);color:var(--gold);display:grid;place-items:center;margin-bottom:16px}
+.feat h3{font-size:18px;margin-bottom:8px}
+.feat p{font-size:14px;color:var(--muted)}
+
+/* cases */
+.cases .grid-3{gap:26px}
+.case{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column}
+.case .top{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;padding:26px 26px 22px}
+.case .tag{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.case .top h3{color:#fff;font-size:20px;margin-top:8px}
+.case .body{padding:24px 26px;flex:1;display:flex;flex-direction:column;gap:14px}
+.case .row{font-size:14px}
+.case .row b{color:var(--ink)}
+.case .result{margin-top:auto;background:var(--soft);border-left:3px solid var(--gold);padding:14px 16px;border-radius:0 10px 10px 0}
+.case .result .big{font-family:'Playfair Display';font-size:26px;font-weight:700;color:var(--ok)}
+
+/* process */
+.proc{background:var(--navy);color:#fff}
+.proc .sec-head h2{color:#fff}
+.proc .sec-head p{color:rgba(255,255,255,.7)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.step{position:relative;padding-top:8px}
+.step .n{font-family:'Playfair Display';font-size:54px;font-weight:700;color:rgba(194,161,77,.3);line-height:1}
+.step h3{color:#fff;font-size:20px;margin:6px 0 10px}
+.step p{color:rgba(255,255,255,.72);font-size:14px}
+
+/* team */
+.team .grid-4{gap:24px}
+.member{text-align:center}
+.member .ava{
+  width:130px;height:130px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;
+  font-family:'Playfair Display';font-size:42px;font-weight:700;color:#fff;
+  background:linear-gradient(135deg,var(--navy),var(--navy-2));border:3px solid var(--gold);
+}
+.member h3{font-size:20px}
+.member .role{color:var(--gold-2);font-weight:700;font-size:14px;margin:4px 0 8px}
+.member p{font-size:14px;color:var(--muted)}
+
+/* testimonials */
+.tst{background:var(--soft)}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.quote{background:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow-sm);position:relative}
+.quote .mark{font-family:'Playfair Display';font-size:70px;color:var(--soft-2);position:absolute;top:6px;right:24px;line-height:1}
+.quote p{font-size:16px;color:var(--text);position:relative;z-index:2}
+.quote .who{display:flex;align-items:center;gap:14px;margin-top:22px}
+.quote .who .av{width:48px;height:48px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-weight:700}
+.quote .who b{display:block;font-family:'Manrope';color:var(--ink)}
+.quote .who span{font-size:13px;color:var(--muted)}
+
+/* faq */
+.faq-list{max-width:840px;margin:0 auto}
+.qa{border:1px solid var(--line);border-radius:13px;margin-bottom:14px;overflow:hidden;background:#fff}
+.qa button{width:100%;text-align:left;background:none;border:0;padding:22px 24px;font-family:'Manrope';font-weight:700;font-size:17px;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.qa .ans{max-height:0;overflow:hidden;transition:.3s;color:var(--muted);padding:0 24px}
+.qa .ans p{padding-bottom:22px}
+.qa.open .ans{max-height:300px}
+.qa .pl{color:var(--gold-2);font-size:24px;transition:.3s;flex:0 0 auto}
+.qa.open .pl{transform:rotate(45deg)}
+
+/* final cta */
+.final{background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#fff;position:relative;overflow:hidden}
+.final::after{content:"";position:absolute;right:-100px;top:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(194,161,77,.25),transparent 70%)}
+.final .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.final h2{color:#fff;font-size:clamp(28px,3.4vw,40px)}
+.final p{color:rgba(255,255,255,.8);font-size:17px;margin-top:16px}
+.final ul{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:12px}
+.final li{display:flex;gap:11px;align-items:center;color:rgba(255,255,255,.9)}
+.final li svg{flex:0 0 auto;color:var(--gold)}
+.final-form{background:#fff;border-radius:var(--radius);padding:32px;color:var(--text)}
+.final-form h3{font-size:24px;margin-bottom:6px}
+.final-form p{font-size:14px;color:var(--muted);margin-bottom:18px}
+
+/* footer */
+footer{background:#0a1622;color:rgba(255,255,255,.7);padding:60px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer h4{color:#fff;font-family:'Manrope';font-weight:700;font-size:16px;margin-bottom:16px}
+footer a{color:rgba(255,255,255,.7)}footer a:hover{color:var(--gold)}
+.foot-contact div{margin-bottom:12px;font-size:15px}
+.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:13px;color:rgba(255,255,255,.45)}
+.badge-demo{display:inline-block;background:rgba(194,161,77,.15);color:var(--gold);border:1px solid rgba(194,161,77,.4);padding:4px 12px;border-radius:30px;font-size:12px;font-weight:700}
+
+/* reveal anim */
+.reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:980px){
+  nav.main,.head-phone{display:none}
+  .burger{display:flex}
+  .hero .wrap{grid-template-columns:1fr;gap:34px;padding-top:120px}
+  .final .wrap{grid-template-columns:1fr;gap:30px}
+  .grid-3,.grid-4,.steps,.grid-2{grid-template-columns:1fr 1fr}
+  .stats .wrap{grid-template-columns:1fr 1fr;gap:30px}
+  .stat:nth-child(2){border:0}
+  .foot-grid{grid-template-columns:1fr}
+  nav.mobile{display:var(--mob,none);position:fixed;inset:0;z-index:60;background:rgba(13,27,42,.99);flex-direction:column;align-items:center;justify-content:center;gap:26px}
+  nav.mobile a{color:#fff;font-size:22px;font-weight:600}
+  nav.mobile .close{position:absolute;top:24px;right:26px;font-size:34px;color:#fff;background:none;border:0}
+}
+@media(max-width:600px){
+  section{padding:62px 0}
+  .grid-3,.grid-4,.steps,.grid-2{grid-template-columns:1fr}
+  .hero h1{font-size:33px}
+  .hero p.lead{font-size:17px}
+  .stat{border:0}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="wrap bar">
+    <a href="#top" class="logo">
+      <span class="mark">SR</span>
+      <span><b>SMART RESULT</b><small>Юридическая защита бизнеса</small></span>
+    </a>
+    <nav class="main">
+      <a href="#services">Услуги</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#team">Команда</a>
+      <a href="#process">Как работаем</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="head-cta">
+      <a href="tel:+79683991111" class="head-phone">+7 968 399-11-11<small>Москва · Сочи · вся Россия</small></a>
+      <a href="#lead" class="btn btn-gold">Консультация</a>
+      <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<nav class="mobile" id="mobnav">
+  <button class="close" id="closeNav">&times;</button>
+  <a href="#services">Услуги</a>
+  <a href="#cases">Кейсы</a>
+  <a href="#team">Команда</a>
+  <a href="#process">Как работаем</a>
+  <a href="#faq">Вопросы</a>
+  <a href="tel:+79683991111" class="btn btn-gold">+7 968 399-11-11</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--gold)">Юридическая компания · с 2014 года</span>
+      <h1>Защитим ваш бизнес там, где <em>цена ошибки</em> — миллионы</h1>
+      <p class="lead">Споры с контрагентами, налоговые и полицейские проверки, сделки и недвижимость. Берём задачу под ключ — от анализа до результата в суде. Первая консультация бесплатна.</p>
+      <div class="hero-cta">
+        <a href="#lead" class="btn btn-gold">Получить консультацию</a>
+        <a href="#cases" class="btn btn-ghost">Смотреть кейсы</a>
+      </div>
+      <div class="hero-trust">
+        <div><b>12</b> лет на рынке</div>
+        <div><b>500+</b> выигранных дел</div>
+        <div><b>98%</b> споров в нашу пользу</div>
+      </div>
+    </div>
+    <div class="lead-card" id="lead">
+      <h3>Бесплатная консультация</h3>
+      <p>Оставьте номер — юрист перезвонит в течение 15 минут и оценит перспективы вашего дела.</p>
+      <form onsubmit="return demoSubmit(event)">
+        <div class="field"><input type="text" placeholder="Ваше имя" required></div>
+        <div class="field"><input type="tel" placeholder="Телефон" required></div>
+        <div class="field"><textarea rows="2" placeholder="Кратко о задаче (необязательно)"></textarea></div>
+        <button class="btn btn-gold btn-block" type="submit">Получить консультацию</button>
+        <div class="note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="num" data-to="12">0</div><div class="lbl">лет защищаем бизнес</div></div>
+    <div class="stat"><div class="num" data-to="500" data-suf="+">0</div><div class="lbl">завершённых дел</div></div>
+    <div class="stat"><div class="num" data-to="1.4" data-suf=" млрд ₽" data-dec="1">0</div><div class="lbl">отсужено и сэкономлено клиентам</div></div>
+    <div class="stat"><div class="num" data-to="98" data-suf="%">0</div><div class="lbl">споров выигрываем</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Направления</span>
+      <h2>Решаем задачи, от которых зависит бизнес</h2>
+      <p>Не «юридическое сопровождение вообще», а конкретные проблемы — и конкретный результат по каждой.</p>
+    </div>
+    <div class="grid-3">
+      <div class="svc reveal">
+        <div class="ic">⚖️</div>
+        <h3>Корпоративные споры</h3>
+        <p>Конфликты партнёров, взыскание долгов, споры с контрагентами. Вернём деньги и долю.</p>
+        <a href="#lead">Обсудить задачу →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ic">🛡️</div>
+        <h3>Защита при проверках</h3>
+        <p>Налоговая, полиция, надзор. Сопроводим проверку и оспорим доначисления и штрафы.</p>
+        <a href="#lead">Обсудить задачу →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ic">📄</div>
+        <h3>Договорная работа</h3>
+        <p>Разработка и экспертиза договоров так, чтобы риски были у второй стороны, а не у вас.</p>
+        <a href="#lead">Обсудить задачу →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ic">🏢</div>
+        <h3>Сделки и недвижимость</h3>
+        <p>Сопровождение сделок, проверка чистоты объекта, оформление прав собственности.</p>
+        <a href="#lead">Обсудить задачу →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ic">💡</div>
+        <h3>Интеллектуальная собственность</h3>
+        <p>Регистрация товарных знаков, защита бренда и контента, борьба с нарушителями.</p>
+        <a href="#lead">Обсудить задачу →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ic">🤝</div>
+        <h3>Абонентское сопровождение</h3>
+        <p>Свой юротдел на аутсорсе — фиксированная ставка в месяц, ответ в день обращения.</p>
+        <a href="#lead">Обсудить задачу →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Почему мы</span>
+      <h2>Берём ответственность за результат</h2>
+    </div>
+    <div class="grid-4">
+      <div class="feat reveal"><div class="ic">🎯</div><h3>Работаем на исход</h3><p>Оцениваем перспективу честно. Если дело бесперспективно — скажем сразу, а не возьмём деньги.</p></div>
+      <div class="feat reveal"><div class="ic">⏱️</div><h3>На связи 24/7</h3><p>В критической ситуации (обыск, задержание) юрист выезжает в течение часа.</p></div>
+      <div class="feat reveal"><div class="ic">🔒</div><h3>Полная конфиденциальность</h3><p>Адвокатская тайна и NDA. Ваши данные и стратегия не выйдут за пределы команды.</p></div>
+      <div class="feat reveal"><div class="ic">🇷🇺</div><h3>Вся Россия</h3><p>Офисы в Москве и Сочи, ведём дела в судах любого региона — лично и онлайн.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Кейсы</span>
+      <h2>Цифры, которые говорят за нас</h2>
+      <p>Несколько типовых дел из практики (образец — реальные кейсы подставляются здесь).</p>
+    </div>
+    <div class="grid-3">
+      <div class="case reveal">
+        <div class="top"><span class="tag">Налоговый спор</span><h3>Сняли доначисление НДС</h3></div>
+        <div class="body">
+          <div class="row"><b>Проблема:</b> ФНС доначислила компании-импортёру 38 млн ₽ и заблокировала счета.</div>
+          <div class="row"><b>Что сделали:</b> оспорили в УФНС и арбитраже, доказали реальность поставок.</div>
+          <div class="result"><div class="big">−38 млн ₽</div>доначисление отменено полностью</div>
+        </div>
+      </div>
+      <div class="case reveal">
+        <div class="top"><span class="tag">Корпоративный спор</span><h3>Вернули долю в бизнесе</h3></div>
+        <div class="body">
+          <div class="row"><b>Проблема:</b> партнёр размыл долю клиента через допэмиссию и вывел активы.</div>
+          <div class="row"><b>Что сделали:</b> оспорили сделки, добились возврата доли и компенсации.</div>
+          <div class="result"><div class="big">51%</div>контроль над компанией возвращён</div>
+        </div>
+      </div>
+      <div class="case reveal">
+        <div class="top"><span class="tag">Взыскание</span><h3>Получили деньги с подрядчика</h3></div>
+        <div class="body">
+          <div class="row"><b>Проблема:</b> подрядчик сорвал сроки и не возвращал аванс 12 млн ₽.</div>
+          <div class="row"><b>Что сделали:</b> суд + обеспечительные меры на имущество должника.</div>
+          <div class="result"><div class="big">12 млн ₽</div>взыскано с неустойкой за 4 месяца</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="proc" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="color:var(--gold)">Как работаем</span>
+      <h2>Прозрачно на каждом этапе</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">01</div><h3>Заявка</h3><p>Оставляете заявку — перезваниваем за 15 минут, задаём уточняющие вопросы.</p></div>
+      <div class="step reveal"><div class="n">02</div><h3>Анализ</h3><p>Изучаем документы, честно оцениваем перспективы и называем стоимость.</p></div>
+      <div class="step reveal"><div class="n">03</div><h3>Договор</h3><p>Фиксируем задачу, сроки и цену. Никаких скрытых доплат «по ходу».</p></div>
+      <div class="step reveal"><div class="n">04</div><h3>Результат</h3><p>Ведём дело до конца и держим вас в курсе на каждом шаге.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Команда</span>
+      <h2>Юристы, а не call-центр</h2>
+      <p>С вашим делом работает конкретный профильный специалист (образец — реальные фото и имена здесь).</p>
+    </div>
+    <div class="grid-4">
+      <div class="member reveal"><div class="ava">АК</div><h3>Алексей К.</h3><div class="role">Управляющий партнёр</div><p>Арбитраж, корпоративные споры. 18 лет практики.</p></div>
+      <div class="member reveal"><div class="ava">МС</div><h3>Мария С.</h3><div class="role">Руководитель налоговой практики</div><p>Споры с ФНС, налоговое планирование.</p></div>
+      <div class="member reveal"><div class="ava">ДВ</div><h3>Дмитрий В.</h3><div class="role">Адвокат</div><p>Защита при проверках, экономические дела.</p></div>
+      <div class="member reveal"><div class="ava">ЕР</div><h3>Елена Р.</h3><div class="role">Юрист по недвижимости</div><p>Сделки, регистрация прав, IP и товарные знаки.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="tst">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Отзывы</span>
+      <h2>Что говорят клиенты</h2>
+    </div>
+    <div class="grid-2">
+      <div class="quote reveal">
+        <div class="mark">”</div>
+        <p>Налоговая заблокировала счета перед сделкой. Ребята за две недели сняли арест и отбили доначисление. Без них потеряли бы контракт.</p>
+        <div class="who"><div class="av">ИП</div><div><b>Игорь П.</b><span>генеральный директор, торговая компания</span></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="mark">”</div>
+        <p>Партнёр пытался выдавить меня из бизнеса. Smart Result вернули мне долю и компенсацию. Чёткая стратегия и ни одного пустого обещания.</p>
+        <div class="who"><div class="av">СМ</div><div><b>Светлана М.</b><span>совладелец, производство</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Вопросы</span>
+      <h2>Частые вопросы</h2>
+    </div>
+    <div class="faq-list">
+      <div class="qa reveal"><button>Сколько стоят ваши услуги?<span class="pl">+</span></button><div class="ans"><p>Стоимость зависит от задачи. На бесплатной консультации мы изучаем ситуацию и называем фиксированную цену заранее — без скрытых доплат по ходу дела.</p></div></div>
+      <div class="qa reveal"><button>Что будет на первой консультации?<span class="pl">+</span></button><div class="ans"><p>Юрист разберёт вашу ситуацию, честно оценит перспективы и предложит план действий. Если дело бесперспективно — скажем прямо.</p></div></div>
+      <div class="qa reveal"><button>Вы работаете только в Москве?<span class="pl">+</span></button><div class="ans"><p>Нет. Офисы в Москве и Сочи, но ведём дела в судах любого региона России — очно и дистанционно.</p></div></div>
+      <div class="qa reveal"><button>Гарантируете ли вы результат?<span class="pl">+</span></button><div class="ans"><p>По закону юрист не вправе гарантировать решение суда. Но мы беремся только за дела с реальной перспективой и доводим их до конца — наша статистика 98% говорит сама за себя.</p></div></div>
+      <div class="qa reveal"><button>Насколько конфиденциально обращение?<span class="pl">+</span></button><div class="ans"><p>Полностью. Адвокатская тайна и соглашение о неразглашении. Информация о вашем деле не покидает команду.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>Расскажите о задаче — оценим перспективы бесплатно</h2>
+      <p>Чем раньше подключается юрист, тем больше вариантов решения. Не ждите повестки или блокировки счёта.</p>
+      <ul>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Перезвоним в течение 15 минут</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Честная оценка перспектив дела</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Фиксированная стоимость заранее</li>
+      </ul>
+    </div>
+    <div class="final-form">
+      <h3>Оставить заявку</h3>
+      <p>Юрист свяжется с вами и ответит на вопросы.</p>
+      <form onsubmit="return demoSubmit(event)">
+        <div class="field"><input type="text" placeholder="Ваше имя" required></div>
+        <div class="field"><input type="tel" placeholder="Телефон" required></div>
+        <div class="field"><textarea rows="2" placeholder="Кратко о задаче"></textarea></div>
+        <button class="btn btn-gold btn-block" type="submit">Отправить заявку</button>
+        <div class="note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo" style="margin-bottom:18px"><span class="mark">SR</span><span><b>SMART RESULT</b><small>Юридическая защита бизнеса</small></span></a>
+        <p style="font-size:14px;max-width:320px">Юридическая компания для бизнеса. Споры, проверки, сделки, защита активов. Москва · Сочи · вся Россия.</p>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <div class="foot-contact">
+          <div><a href="tel:+79683991111">+7 968 399-11-11</a></div>
+          <div><a href="tel:+79685072727">+7 968 507-27-27</a></div>
+          <div><a href="mailto:info@smart-result.ru">info@smart-result.ru</a></div>
+        </div>
+      </div>
+      <div>
+        <h4>Офисы</h4>
+        <div class="foot-contact">
+          <div>Москва, ул. Профсоюзная, 76</div>
+          <div>Сочи, ул. Черноморская, 15</div>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Smart Result. Все права защищены.</div>
+      <div><span class="badge-demo">Концепт-образец · alchemy-tech</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// header scroll
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40));
+// mobile nav
+const mob=document.getElementById('mobnav');
+document.getElementById('burger').onclick=()=>mob.style.setProperty('--mob','flex');
+document.getElementById('closeNav').onclick=()=>mob.style.setProperty('--mob','none');
+mob.querySelectorAll('a').forEach(a=>a.onclick=()=>mob.style.setProperty('--mob','none'));
+// faq
+document.querySelectorAll('.qa button').forEach(b=>b.onclick=()=>{
+  const qa=b.parentElement;const open=qa.classList.contains('open');
+  document.querySelectorAll('.qa').forEach(x=>x.classList.remove('open'));
+  if(!open)qa.classList.add('open');
+});
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// stat counters
+const sio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return; sio.unobserve(e.target);
+  const el=e.target,to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||0),suf=el.dataset.suf||'';
+  let s=0;const steps=40;const inc=to/steps;
+  const t=setInterval(()=>{s+=inc;if(s>=to){s=to;clearInterval(t)}el.textContent=s.toFixed(dec)+suf;},22);
+},{threshold:.5});
+document.querySelectorAll('.num').forEach(n=>sio.observe(n));
+// demo form
+function demoSubmit(e){e.preventDefault();e.target.querySelectorAll('input,textarea').forEach(i=>i.value='');alert('Спасибо! Это демо-образец — в рабочей версии заявка уходит юристу и в CRM. Перезвоним в течение 15 минут.');return false;}
+</script>
+</body>
+</html>
