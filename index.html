@@ -8,6 +8,8 @@
 <meta property="og:title" content="Smart Result — юридическая защита бизнеса">
 <meta property="og:description" content="Решаем сложные юридические задачи бизнеса. 12 лет, 500+ дел, офисы Москва и Сочи.">
 <meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d1b2a'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='32' fill='%23c2a14d' text-anchor='middle'%3ESR%3C/text%3E%3C/svg%3E">
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -579,7 +581,7 @@ const sio=new IntersectionObserver(es=>es.forEach(e=>{
   const el=e.target,to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||0),suf=el.dataset.suf||'';
   let s=0;const steps=40;const inc=to/steps;
   const t=setInterval(()=>{s+=inc;if(s>=to){s=to;clearInterval(t)}el.textContent=s.toFixed(dec)+suf;},22);
-},{threshold:.5});
+}),{threshold:.5});
 document.querySelectorAll('.num').forEach(n=>sio.observe(n));
 // demo form
 function demoSubmit(e){e.preventDefault();e.target.querySelectorAll('input,textarea').forEach(i=>i.value='');alert('Спасибо! Это демо-образец — в рабочей версии заявка уходит юристу и в CRM. Перезвоним в течение 15 минут.');return false;}
